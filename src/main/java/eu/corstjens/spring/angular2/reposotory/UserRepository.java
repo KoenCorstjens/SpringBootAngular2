@@ -1,7 +1,8 @@
 package eu.corstjens.spring.angular2.reposotory;
 
-import org.springframework.data.repository.CrudRepository;
 import eu.corstjens.spring.angular2.moddel.User;
+import org.springframework.data.repository.CrudRepository;
+
 import java.util.List;
 
 /**

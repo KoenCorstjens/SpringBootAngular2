@@ -12,7 +12,7 @@ import java.util.List;
 public interface ProjectRepository extends CrudRepository<Project, Long> {
 
     @Query("select p from Project p where p.manager.id = ?#{principal.id}")
-    List<Project>  findForCurrentUser();
+    List<Project> findForCurrentUser();
 
     List<Project> findAll();
 }

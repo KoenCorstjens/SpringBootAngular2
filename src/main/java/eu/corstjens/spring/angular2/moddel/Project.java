@@ -1,7 +1,6 @@
 package eu.corstjens.spring.angular2.moddel;
 
 
-
 import javax.persistence.*;
 
 /**
@@ -22,7 +21,7 @@ public class Project {
 
     public Project(String name, User user) {
         this.name = name;
-        this.manager =user;
+        this.manager = user;
     }
 
     public long getId() {
@@ -52,7 +51,7 @@ public class Project {
     @Override
     public String toString() {
         return String.format(
-                "Customer[id=%d, firstName='%s', lastName='%s']",
-                id, name, manager.getId());
+            "Customer[id=%d, firstName='%s', lastName='%s']",
+            id, name, manager.getId());
     }
 }

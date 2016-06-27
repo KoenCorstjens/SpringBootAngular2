@@ -1,26 +1,28 @@
 package eu.corstjens.spring.angular2;
 
+import eu.corstjens.spring.angular2.moddel.Project;
+import eu.corstjens.spring.angular2.moddel.User;
 import eu.corstjens.spring.angular2.reposotory.ProjectRepository;
 import eu.corstjens.spring.angular2.reposotory.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.web.SpringBootServletInitializer;
+
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import eu.corstjens.spring.angular2.moddel.*;
 
 /**
  * Created by koencorstjens on 22/06/16.
  */
 
 @SpringBootApplication
+@EnableWebSecurity
 public class Application implements CommandLineRunner {
     @Autowired
     private ProjectRepository projectRepository;
     @Autowired
     private UserRepository userRepository;
-
 
 
     public static void main(String[] args) {

@@ -10,7 +10,7 @@ import java.io.Serializable;
  * Created by koencorstjens on 29/04/15.
  */
 @Entity
-public class User implements Serializable{
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
