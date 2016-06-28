@@ -16,7 +16,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>eu.corstjens.spring.angular2.Application</start-class>
     </properties>
 
     <parent>
@@ -40,60 +39,34 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+
     </dependencies>
 
 
-
-
-
     <build>
-
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <configuration>
-                    <!-- specify UTF-8, ISO-8859-1 or any other file encoding -->
-                    <encoding>ISO-8859-1</encoding>
-                </configuration>
-            </plugin>
-
             <plugin>
                 <groupId>pl.allegro</groupId>
                 <artifactId>grunt-maven-plugin</artifactId>
                 <version>1.5.1</version>
                 <configuration>
                     <sourceDirectory>src/main/resources/static</sourceDirectory>
-                    <jsSourceDirectory>.</jsSourceDirectory>
+                    <jsSourceDirectory>/</jsSourceDirectory>
                 </configuration>
                 <executions>
                     <execution>
@@ -104,20 +77,11 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
         </plugins>
-
-        <resources>
-            <resource>
-                <directory>${basedir}/src</directory>
-                <includes>
-                    <include>**/*.js</include>
-                    <include>**/*.ts</include>
-                    <include>**/*.map</include>
-                    <include>**/*.html</include>
-                    <include>**/*.json</include>
-                </includes>
-            </resource>
-        </resources>
     </build>
 
 </project>
